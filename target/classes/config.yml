@@ -1,0 +1,93 @@
+# ============================================
+# MobGather - 怪物聚集系统配置文件
+# 版本: 1.1.0
+# 适用: Purpur 1.21.4
+# ============================================
+
+# 全局设置
+global:
+  particles: true
+  sounds: true
+  actionbar: true
+  chat-messages: true
+
+# 聚集范围设置 (单位: 格/block)
+ranges:
+  default: 100
+  zombie-head: 100
+  spider-eye: 100
+  skeleton-skull: 100
+  creeper-head: 100
+  slime-ball: 100
+  wither-skeleton-skull: 100
+  player-head: 100
+  dragon-head: 100
+
+# 冷却时间设置 (单位: 秒)
+cooldowns:
+  default: 5
+  zombie-head: 5
+  spider-eye: 5
+  skeleton-skull: 5
+  creeper-head: 5
+  slime-ball: 5
+  wither-skeleton-skull: 15
+  player-head: 0
+  dragon-head: 20
+
+# 物品消耗设置
+consume:
+  enabled: true
+  zombie-head: true
+  spider-eye: true
+  skeleton-skull: true
+  creeper-head: true
+  slime-ball: true
+  wither-skeleton-skull: true
+  player-head: false
+  dragon-head: true
+
+# 聚集效果设置
+effects:
+  glowing: true
+  glowing-duration: 5
+  particle-count: 50
+  particle-types:
+    zombie-head: "HAPPY_VILLAGER"
+    spider-eye: "WITCH"
+    skeleton-skull: "ASH"
+    creeper-head: "SMOKE"
+    slime-ball: "ITEM_SLIME"
+    wither-skeleton-skull: "SOUL_FIRE_FLAME"
+    player-head: "ENCHANT"
+    dragon-head: "DRAGON_BREATH"
+
+# 音效设置
+sound-effects:
+  zombie-head: "ENTITY_ZOMBIE_AMBIENT"
+  spider-eye: "ENTITY_SPIDER_AMBIENT"
+  skeleton-skull: "ENTITY_SKELETON_AMBIENT"
+  creeper-head: "ENTITY_CREEPER_PRIMED"
+  slime-ball: "ENTITY_SLIME_SQUISH"
+  wither-skeleton-skull: "ENTITY_WITHER_AMBIENT"
+  player-head: "BLOCK_BEACON_POWER_SELECT"
+  dragon-head: "ENTITY_ENDER_DRAGON_GROWL"
+
+# 消息设置
+messages:
+  prefix: "<dark_gray>[<green>MobGather<dark_gray>] <reset>"
+  gather-zombie: "<dark_green>正在聚集僵尸..."
+  gather-spider: "<dark_red>正在聚集蜘蛛..."
+  gather-skeleton: "<gray>正在聚集骷髅..."
+  gather-creeper: "<green>正在聚集苦力怕..."
+  gather-slime: "<green>正在聚集史莱姆..."
+  gather-all: "<dark_red><bold>正在聚集所有敌对生物..."
+  gather-all-free: "<gold><bold>正在聚集所有敌对生物... <gray>[无消耗]"
+  kill-all: "<dark_red><bold>抹杀所有敌对生物！"
+  cooldown: "<red>冷却中，请等待 <yellow>%time% <red>秒"
+  no-permission: "<red>你没有权限使用此功能！"
+  reload-success: "<green>配置重载成功！"
+  reload-fail: "<red>配置重载失败！"
+  kill-success: "<red>已抹杀 <yellow>%count% <red>只敌对生物！"
+
+debug: false

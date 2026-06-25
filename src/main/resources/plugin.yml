@@ -1,0 +1,70 @@
+name: MobGather
+version: '${project.version}'
+main: com.example.mobgather.MobGatherPlugin
+api-version: '1.21.4'
+author: Example
+
+description: 怪物聚集系统 - 手持头颅右键触发，支持自定义范围和冷却时间
+
+commands:
+  mobgather:
+    description: MobGather 主命令
+    usage: /mobgather <reload|cooldown|give|toggle|help>
+    permission: mobgather.use
+    permission-message: '<red>你没有权限使用此命令！'
+
+permissions:
+  mobgather.use:
+    description: 允许使用怪物聚集功能
+    default: true
+  mobgather.use.zombie:
+    description: 允许使用僵尸头颅聚集僵尸
+    default: true
+  mobgather.use.spider:
+    description: 允许使用蜘蛛眼聚集蜘蛛
+    default: true
+  mobgather.use.skeleton:
+    description: 允许使用骷髅头颅聚集骷髅
+    default: true
+  mobgather.use.creeper:
+    description: 允许使用苦力怕头颅聚集苦力怕
+    default: true
+  mobgather.use.slime:
+    description: 允许使用粘液球聚集史莱姆
+    default: true
+  mobgather.use.wither:
+    description: 允许使用凋零骷髅头颅聚集所有敌对生物
+    default: true
+  mobgather.use.player:
+    description: 允许使用玩家头颅聚集所有敌对生物（无消耗）
+    default: true
+  mobgather.use.dragon:
+    description: 允许使用龙首抹杀敌对生物
+    default: true
+  mobgather.admin:
+    description: 管理员权限
+    default: op
+    children:
+      mobgather.use: true
+      mobgather.use.zombie: true
+      mobgather.use.spider: true
+      mobgather.use.skeleton: true
+      mobgather.use.creeper: true
+      mobgather.use.slime: true
+      mobgather.use.wither: true
+      mobgather.use.player: true
+      mobgather.use.dragon: true
+      mobgather.toggle: true
+      mobgather.toggle.others: true
+  mobgather.toggle:
+    description: 允许切换自己的冷却/消耗绕过权限
+    default: false
+  mobgather.toggle.others:
+    description: 允许切换其他玩家的冷却/消耗绕过权限
+    default: op
+  mobgather.bypass.cooldown:
+    description: 绕过冷却时间
+    default: op
+  mobgather.bypass.consume:
+    description: 绕过物品消耗
+    default: op

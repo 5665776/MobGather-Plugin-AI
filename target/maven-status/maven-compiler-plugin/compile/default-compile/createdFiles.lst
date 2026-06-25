@@ -1,0 +1,8 @@
+com\example\mobgather\MobGatherCommand.class
+com\example\mobgather\CooldownManager.class
+com\example\mobgather\GatherManager$1.class
+com\example\mobgather\GatherManager.class
+com\example\mobgather\MobGatherTabCompleter.class
+com\example\mobgather\ConfigManager.class
+com\example\mobgather\MobGatherPlugin.class
+com\example\mobgather\PlayerInteractListener.class
